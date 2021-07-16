@@ -47,8 +47,12 @@ export default class PerformanceTotalService {
     afterScenario({ result }: any) {
         let status = false;
 
-        if (result.status === Status.PASSED) {
+        if (result != undefined && result.status === Status.PASSED) {
             status = true;
+        }
+        else if(result == undefined) {
+            status = true;
+            console.log("Performance-Total Warning: There is a WebdriverIO issue that can't recognize Cucumber test status. Therefore the option 'dropResultsFromFailedTest' will not work. Please use version 2.x.x with WebdriverIO version >= 7.x.x .");
         }
 
         performanceTotal.finalize(status);
