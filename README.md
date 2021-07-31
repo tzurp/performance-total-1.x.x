@@ -1,8 +1,8 @@
 # performance-total
-Note:</br>
+<h3>Note:</h3></br>
 For WebdriverIO v7 use version 2.x.x<br/>
-For WebdriverIO v6 use version 1.x.x
-!!! In WebdriverIO v6, if you get the warning: "Performance-Total Warning: There is a WebdriverIO issue that can't recognize Cucumber test status. Therefore the option 'dropResultsFromFailedTest' will not work. Please use version 2.x.x with WebdriverIO version >= 7.x.x .", be aware that the option <b>dropResultsFromFailedTest</b> would be ignored!
+For WebdriverIO v6 use version 1.x.x<br/>
+Be aware that in WebdriverIO v6, if you get the warning: "Performance-Total Warning: There is a WebdriverIO issue that can't recognize Cucumber test status. Therefore the option 'dropResultsFromFailedTest' will not work. Please use version 2.x.x with WebdriverIO version >= 7.x.x .", the option <b>dropResultsFromFailedTest</b> would be ignored!
 ---
 
 ![chart](resources/chart.png)
