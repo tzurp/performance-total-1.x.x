@@ -1,5 +1,6 @@
 export class PerformanceResult {
     name: string;
+    browserName: string;
     averageTime: number;
     sem: number;
     repeats: number;
@@ -10,6 +11,7 @@ export class PerformanceResult {
 
     constructor() {
         this.name = "";
+        this.browserName = "";
         this.averageTime = 0;
         this.sem = 0;
         this.repeats = 0;

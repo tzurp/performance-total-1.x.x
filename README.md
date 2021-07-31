@@ -2,7 +2,7 @@
 Note:</br>
 For WebdriverIO v7 use version 2.x.x<br/>
 For WebdriverIO v6 use version 1.x.x
-
+!!! In WebdriverIO v6, if you get the warning: "Performance-Total Warning: There is a WebdriverIO issue that can't recognize Cucumber test status. Therefore the option 'dropResultsFromFailedTest' will not work. Please use version 2.x.x with WebdriverIO version >= 7.x.x .", be aware that the option <b>dropResultsFromFailedTest</b> would be ignored!
 ---
 
 ![chart](resources/chart.png)
@@ -44,7 +44,8 @@ exports.config = {
             disableAppendToExistingFile: false,
             performanceResultsFileName: "performance-results",
             dropResultsFromFailedTest: false,
-            performanceResultsDirectory: "performance-results"
+            performanceResultsDirectory: "performance-results",
+            analyzeByBrowser: false
         }]
       ]
   // ...
@@ -83,6 +84,8 @@ performanceResultsFileName: "results-dir/performance-total-results"
 ...
 ```
 
+<h3>analyzeByBrowser</h3>
+Default is `false`. When true, the performance data would be grouped also by the browser type.
 
 <h2>Usage in test</h2>
 

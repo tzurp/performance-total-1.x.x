@@ -7,12 +7,12 @@ beforeEach(async () => {
 
 afterEach(() => {
     console.log("Test finished");
-    performancetotal.finalize(true);
+    performancetotal.finalize(browser, true);
     browser.reloadSession();
 });
 
 after(async () => {
-    await performancetotal.analyzeResults();
+    await performancetotal.analyzeResults({analyzeByBrowser: true});
 });
 
 describe('suite-1', () => {

@@ -13,7 +13,7 @@ export class StorageCache {
         this._performanceEntries = new Array<PerformanceLogEntry>();
     }
 
-    createPerformanceEntries(isTestPassed: boolean) {
+    createPerformanceEntries(isTestPassed: boolean, browser: WebdriverIO.Browser) {
         const revStartEntries = this._startLogEntries.reverse();
 
         revStartEntries.forEach(startEntry => {
@@ -25,6 +25,7 @@ export class StorageCache {
                 tempPerformanceEntry.id = startEntry.id;
                 tempPerformanceEntry.instanceId = startEntry.instanceId;
                 tempPerformanceEntry.name = correspondedEndEntry.name;
+                tempPerformanceEntry.browserName = browser.capabilities.browserName ?? "";
                 tempPerformanceEntry.startDisplayTime = startEntry.displayTime;
                 tempPerformanceEntry.startTime = startEntry.time;
                 tempPerformanceEntry.endTime = correspondedEndEntry.time;
