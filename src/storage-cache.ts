@@ -25,7 +25,7 @@ export class StorageCache {
                 tempPerformanceEntry.id = startEntry.id;
                 tempPerformanceEntry.instanceId = startEntry.instanceId;
                 tempPerformanceEntry.name = correspondedEndEntry.name;
-                tempPerformanceEntry.browserName = browser.capabilities.browserName ?? "";
+                tempPerformanceEntry.brName = browser.capabilities.browserName ?? "";
                 tempPerformanceEntry.startDisplayTime = startEntry.displayTime;
                 tempPerformanceEntry.startTime = startEntry.time;
                 tempPerformanceEntry.endTime = correspondedEndEntry.time;
